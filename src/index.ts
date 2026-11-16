@@ -23,7 +23,7 @@ import "@/index.scss";
 import * as api from "@/api/api";
 // import { ModuleA } from "./libs/moduleA";
 import { MODULE_CONFIG, ModuleClasses } from "./modules.config";
-import { check, trackFeatureUsage } from "./stats/public-stats";
+import { trackFeatureUsage } from "./stats/public-stats";
 
 // import * as api from "@/api"
 import SettingExample from "@/setting.svelte";
@@ -98,8 +98,6 @@ export default class steveTools extends Plugin {
             await this.pluginConfig.load();
             await this.Stats();
         }
-
-        check();
     }
 
     private async Stats() {
